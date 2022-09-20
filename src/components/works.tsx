@@ -1,6 +1,6 @@
 import React from "react";
 import { Tile, TileBackground, TileContent, TileWrapper } from "./tile";
-import { WorkBackground, WorkContainer, WorkLeft, WorkRight } from "./work";
+import { WorkContainer, WorkLeft, WorkRight } from "./work";
 
 
 
