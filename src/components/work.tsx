@@ -1,18 +1,17 @@
 import React from "react";
-import Link from "next/link";
 
-export const WorkContainer: React.FC = ({children}) => (
+interface Props {
+    children: React.ReactNode
+}
+
+export const WorkContainer: React.FC<Props> = ({children}) => (
     <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen place-items-center">{children}</div>
 )
 
-export const WorkBackground: React.FC = () => {
-    <div className="grid z-50 grid-cols-1 lg:grid-cols-2 w-full min-h-screen top-0 sticky">
-        <div className="bg-black h-[30vh] lg:h-auto"></div>
-        <div className="bg-white h-[70vh] lg:min-h-screen"></div>"
-    </div>
-}
 
-export const WorkLeft: React.FC<{ progress: number }> = ({children, progress}) => {
+
+
+export const WorkLeft: React.FC<{ progress: number, children: React.ReactNode }> = ({children, progress}) => {
     let translateY = Math.max(0, 50 - progress * 3 * 50)
     if (progress > 0.85) translateY = Math.max(-50,-(progress - 0.85) * 2 * 50)
     return (
@@ -24,7 +23,7 @@ export const WorkLeft: React.FC<{ progress: number }> = ({children, progress}) =
     )
 }
 
-export const WorkRight: React.FC<{progress: number }> = ({ children, progress }) => {
+export const WorkRight: React.FC<{progress: number, children: React.ReactNode }> = ({ children, progress }) => {
     let translateY = Math.max(-50, -(progress - 0.5) * 50)
     return (
         <div className="flex lg:items-center justify-center" style={{

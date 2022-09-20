@@ -19,11 +19,11 @@ const Mast: React.FC = () => {
         
         <div ref={refContainer} style={{ transform: `translateY(-${progress * 20}vh)` }} className="hero min-h-screen bg-base-100 sticky top-0 -z-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src="./bg.png" className="w-[300px] rounded-2xl shadow-2xl" />
+          <img src="./coffee.gif" className="w-[300px] rounded-2xl drop-shadow-xl" />
         <div>
             <h1 className="text-5xl py-10 pb-10 font-bold">Hey, Im <span className="text-primary">Chris.</span></h1>
             <span className="text-3xl font-bold">I make things Work.</span>
-            <p className="text-md text-left py-2 indent-1 max-w-[400px]">I am a self started Front End Developer looking to make clients the most efficient product. 
+            <p className="text-md text-left py-2 indent-1 max-w-[400px]">I am a self started Software Developer looking to make clients the most efficient product. 
             Constantly keeping up with the latest tech - how can you not? This stuff is exciting. </p>
         </div>
         </div>

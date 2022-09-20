@@ -4,12 +4,12 @@ import { WorkBackground, WorkContainer, WorkLeft, WorkRight } from "./work";
 
 
 
-const Works = ({ handling = (x: string) => {} }) => (
+const Works = ({ handling = (x: string) => {x} }) => (
 
 
     <TileWrapper numOfPages={4}>
         <TileBackground>
-            <WorkBackground />
+            
         </TileBackground>
         <TileContent>
             <Tile page={0} renderContent={({ progress }) => (
