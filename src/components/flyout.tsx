@@ -40,7 +40,7 @@ type attributes = {
     image1: string,
     image2?: string,
     body3?: string,
-    stack: string,
+    stack: any,
     code: string,
     link: string
 }
