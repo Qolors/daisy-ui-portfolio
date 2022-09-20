@@ -24,6 +24,7 @@ const Flyout = ({prop}: any) => {
         image1={myWorks[work].image1}
         code={myWorks[work].code}
         link={myWorks[work].link}
+        key={myWorks[work].id}
     />
     )
 }
@@ -56,7 +57,7 @@ const WorkClick = ({
     image2,
     code,
     link,
-    stack
+    stack,
 }: attributes) => {
     return (
         <>
@@ -102,7 +103,8 @@ export const myWorks = {
         body3: "This is when I realized - People are familiar with Discord and find it comfy. So, why not bring blog sites to them? This is where JameScape was built.",
         stack: ["Nextjs", "MongoDB", "TailwindCSS", "Prisma", "Discordjs", "AWS"],
         link: "https://jamescape-web-qolors.vercel.app/",
-        code: "https://github.com/Qolors/jamescape-web"
+        code: "https://github.com/Qolors/jamescape-web",
+        id: "0"
     },
 
     wallingtonweb: {
@@ -111,7 +113,8 @@ export const myWorks = {
         body: "A JAMStack Build for Wallington Web Services. Assets and color palette provided by them, and code source requested to be privatized. This site includes: functional emailing, Headless CMS for blog posting, content editing, and SSR for on demand dynamic page creation.",
         stack: ["Nextjs", "TailwindCSS", "Sanity CMS"],
         link: "https://wallingtonweb-dev.vercel.app/",
-        code: ""
+        code: "",
+        id: "1"
 
     },
     shinydex: {
@@ -121,7 +124,8 @@ export const myWorks = {
         body: "ShinyDex is an app built for PokemonGo to let users quickly reference and see what methods are available when catching Shiny Pokemon. This app was built to be simiplistic and fast. A custom recommended search is provided with carousel style feed, as well as quick tips on transitioning loads.",
         stack: ["React", "Styled Components", "Framer Motion", "PoGo API"],
         link: "https://shinydex-three.vercel.app/",
-        code: "https://github.com/Qolors/shinydex"
+        code: "https://github.com/Qolors/shinydex",
+        id: "2"
     },
     natstat: {
         title: "NatStat",
@@ -130,7 +134,8 @@ export const myWorks = {
         body: "A live tracker real world Natural Events currently happening. This mobile friendly application lets you view and read up on all current Wildfires, Volcanoes, and Severe Storms happening around the globe.",
         stack: ["React", "Styled Comonents", "Framer Motion", "Google NASA API"],
         link: "https://natstat.vercel.app/",
-        code: "https://github.com/Qolors/wildfire"
+        code: "https://github.com/Qolors/wildfire",
+        id: "3"
 
     }
 
