@@ -24,7 +24,6 @@ const Flyout = ({prop}: any) => {
         image1={myWorks[work].image1}
         code={myWorks[work].code}
         link={myWorks[work].link}
-        key={myWorks[work].id}
     />
     )
 }
@@ -73,10 +72,10 @@ const WorkClick = ({
             {image2 && <img className="py-4" src={image2} />}
             {body3 && <p className="py-2">{body3}</p> }
             <h2 className="font-bold text-xl">The Stack</h2>
-            {stack.map((s: string) => { return <p>- {s}</p>})}
+            {stack.map((s: string, index: number) => { return <p key={index}>- {s}</p>})}
             <div className="flex justify-between p-4">
-            <a href={link} target="_blank" className="link link-primary">Live Site</a>
-            <a href={code} target="_blank"className="link link-primary">Source Code</a>
+            <a href={link} rel="noopener noreferrer" target="_blank" className="link link-primary">Live Site</a>
+            <a href={code} rel="noopener noreferrer" target="_blank" className="link link-primary">Source Code</a>
             </div>
             <div className="modal-action">
             <label htmlFor="my-modal-6" className="btn">Nice!</label>
@@ -103,8 +102,7 @@ export const myWorks = {
         body3: "This is when I realized - People are familiar with Discord and find it comfy. So, why not bring blog sites to them? This is where JameScape was built.",
         stack: ["Nextjs", "MongoDB", "TailwindCSS", "Prisma", "Discordjs", "AWS"],
         link: "https://jamescape-web-qolors.vercel.app/",
-        code: "https://github.com/Qolors/jamescape-web",
-        id: "0"
+        code: "https://github.com/Qolors/jamescape-web"
     },
 
     wallingtonweb: {
@@ -113,8 +111,7 @@ export const myWorks = {
         body: "A JAMStack Build for Wallington Web Services. Assets and color palette provided by them, and code source requested to be privatized. This site includes: functional emailing, Headless CMS for blog posting, content editing, and SSR for on demand dynamic page creation.",
         stack: ["Nextjs", "TailwindCSS", "Sanity CMS"],
         link: "https://wallingtonweb-dev.vercel.app/",
-        code: "",
-        id: "1"
+        code: ""
 
     },
     shinydex: {
@@ -124,8 +121,7 @@ export const myWorks = {
         body: "ShinyDex is an app built for PokemonGo to let users quickly reference and see what methods are available when catching Shiny Pokemon. This app was built to be simiplistic and fast. A custom recommended search is provided with carousel style feed, as well as quick tips on transitioning loads.",
         stack: ["React", "Styled Components", "Framer Motion", "PoGo API"],
         link: "https://shinydex-three.vercel.app/",
-        code: "https://github.com/Qolors/shinydex",
-        id: "2"
+        code: "https://github.com/Qolors/shinydex"
     },
     natstat: {
         title: "NatStat",
@@ -134,8 +130,7 @@ export const myWorks = {
         body: "A live tracker real world Natural Events currently happening. This mobile friendly application lets you view and read up on all current Wildfires, Volcanoes, and Severe Storms happening around the globe.",
         stack: ["React", "Styled Comonents", "Framer Motion", "Google NASA API"],
         link: "https://natstat.vercel.app/",
-        code: "https://github.com/Qolors/wildfire",
-        id: "3"
+        code: "https://github.com/Qolors/wildfire"
 
     }
 
