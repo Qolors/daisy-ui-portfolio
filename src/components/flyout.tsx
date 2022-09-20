@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 
-interface Props {
-    prop: string
-}
 
-const Flyout: React.FC<Props> = ({prop}) => {
+
+const Flyout = ({prop}: any) => {
 
     const [work, setWork] = useState(prop)
 
@@ -35,14 +33,14 @@ export default Flyout;
 
 type attributes = {
     title: any,
-    subTitle: string
+    subTitle: string,
     body: string,
     subTitle2?: string,
     body2?: string,
     image1: string,
     image2?: string,
     body3?: string,
-    stack: any,
+    stack: string,
     code: string,
     link: string
 }
@@ -87,6 +85,11 @@ const WorkClick = ({
         </>
     )
 }
+
+interface myWork {
+    [index: string]: any
+}
+
 
 export const myWorks = {
     jamescape: {
@@ -133,4 +136,4 @@ export const myWorks = {
 
 
 
-}
+} as myWork
