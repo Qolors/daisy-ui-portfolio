@@ -24,7 +24,7 @@ export const WorkLeft: React.FC<{ progress: number, children: React.ReactNode }>
 }
 
 export const WorkRight: React.FC<{progress: number, children: React.ReactNode }> = ({ children, progress }) => {
-    let translateY = Math.max(-50, -(progress - 0.5) * 50)
+    const translateY = Math.max(-50, -(progress - 0.5) * 50)
     return (
         <div className="flex lg:items-center justify-center" style={{
             transform: `translateY(${translateY}px)`

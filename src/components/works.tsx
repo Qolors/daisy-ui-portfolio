@@ -41,7 +41,7 @@ const Works = ({ handling = (x: string) => {x} }) => (
                 <WorkLeft progress={progress}>
                     <div className="flex flex-col px-10 pt-2 mx-auto">
                     <h1 className="text-5xl font-bold text-left text-primary">WallingtonWeb</h1>
-                    <p className="text-lg pb-4">A Client's custom built Business Site utilizing Sanity Studio.</p>
+                    <p className="text-lg pb-4">A Client&apos;s custom built Business Site utilizing Sanity Studio.</p>
                     <label htmlFor="my-modal-6" className="btn btn-block pointer-events-auto" onClick={() => handling('wallingtonweb')}>Learn More</label>
                     </div>
                 </WorkLeft>
